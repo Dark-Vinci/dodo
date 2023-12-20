@@ -27,7 +27,6 @@ div.container {
 
     & > div.description {
         // @include Debug(aqua);
-        // height: 44px;
 
         & > p {
             color: $audit-card-description-text-color;

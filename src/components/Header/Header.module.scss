@@ -1,5 +1,7 @@
 @import '../../sass/mixins/others.scss';
 @import '../../sass/mixins/border.scss';
+@import '../../sass/constant/colors.scss';
+@import '../../sass/mixins/alignment.scss';
 
 div.container {
     @include Debug();
@@ -7,4 +9,66 @@ div.container {
     @include Rectangle(100vw, 777px);
     @include BgNCol(white, black);
     max-width: 100vw;
+
+    & > div.header_container {
+        @include Square(100%);
+
+        @include Flex(row, space-around);
+
+        & > div {
+            @include Square(100%);
+            @include Debug(green);
+            flex-basis: 50%;
+            margin: 20px;
+        }
+
+        & > div.left {
+            // @include Debug(blue);
+            @include Flex(column, space-between, flex-start);
+
+            & > div {
+                // @include Debug();
+                width: 100%;
+                text-align: left;
+            }
+
+            & > div.two {
+                height: 200px;
+                margin-top: 100px;
+                & > p {
+                    font-size: 90px;
+                }
+            }
+
+            & > div.thre {
+                height: 22px;
+                // @include Debug(aqua);
+                & > p {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+
+            & > div.last {
+                // @include Debug(green);
+
+                & > ul {
+                    list-style-type: none;
+                    @include Flex(row, flex-start);
+                    height: 100%;
+                    & > li {
+                        @include Square(40px);
+                        @include GridCenter();
+                        margin: 0 5px 0 5px;
+                        border-radius: 7px;
+                        background-color: $header-icon-background-color;
+                        & > a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
