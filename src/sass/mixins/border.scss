@@ -1,0 +1,9 @@
+@mixin Border($width: 2px, $style: solid, $color: black, $radius: 0px) {
+    border: $width $style $color;
+    border-radius: $radius;
+}
+
+@mixin Debug($color: red) {
+    border: 2px solid $color;
+}
+
