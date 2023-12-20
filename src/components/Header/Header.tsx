@@ -5,6 +5,7 @@ import { SiBinance, SiChromatic  } from 'react-icons/si';
 import { FaPiggyBank, FaBitcoin } from "react-icons/fa";
 import { TbBrandCoinbase } from "react-icons/tb";
 import { CiMenuKebab } from "react-icons/ci";
+import { BigCard } from './BigCard';
 
 export function Header(): JSX.Element {
     return (
@@ -69,6 +70,7 @@ export function Header(): JSX.Element {
                                 <a href=".">
                                     <CiMenuKebab
                                         size={'30px'}
+                                        color='#000'
                                     />
                                 </a>
                             </li>
@@ -76,7 +78,29 @@ export function Header(): JSX.Element {
                     </div>
                 </div>
 
-                <div className={ style.right }>right hand side</div>
+                <div className={ style.right }>
+                    <div className="f">
+                        <BigCard 
+                            title={'FOR TRADERS'} 
+                            description={'DODO X: The Best Price and Cross-Chain Aggregator'} 
+                            buttonText={'Launch App'} 
+                            backgroundColor={'#F6F5F1'}
+                        />
+                    </div>
+
+                    <div className="s">
+                        <BigCard 
+                            title={'FOR DEVELOPERS'} 
+                            description={'Add trading function to your products and earn transaction fees'} 
+                            buttonText={'Launch App'} 
+                            backgroundColor={'#EDE5FF'}
+                        />
+                    </div>
+
+                    <div className="l">
+
+                    </div>
+                </div>
             </div>
         </div>
     );

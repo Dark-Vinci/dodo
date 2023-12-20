@@ -1,0 +1,49 @@
+@import '../../../sass/mixins/others.scss';
+@import '../../../sass/mixins/border.scss';
+@import '../../../sass/constant/colors.scss';
+@import '../../../sass/mixins/alignment.scss';
+
+div.container {
+    // @include Debug(blue);
+    height: 310px;
+    @include Flex(column, flex-start);
+    border-radius: 30px;
+    padding-left: 20px;
+
+    & > div {
+        margin-bottom: 20px;
+    }
+
+    & > div.title {
+        // @include Debug();
+        height: 24px;
+        width: 100%;
+        text-align: left;
+        color: $header-big-card-bg-color;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    & > div.description {
+        // @include Debug(green);
+        font-size: 30px;
+        font-weight: 40px;
+        text-align: left;
+    }
+
+    & > div.button {
+        // @include Debug(green);
+        width: 100%;
+        @include Flex(row, flex-start);
+        button {
+            background-color: $body-background;
+            color: $white-text-color;
+            font-size: 25px;
+            border: none;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    }
+}
