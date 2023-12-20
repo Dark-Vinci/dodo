@@ -1,8 +1,20 @@
 @import '../../sass/mixins/others.scss';
 @import '../../sass/mixins/border.scss';
+@import '../../sass/constant/colors.scss';
+@import '../../sass/mixins/alignment.scss';
 
 div.container {
     @include Debug(green);
     @include Rectangle(100vw, 577px);
-    @include BgNCol(yellow, black);
+    @include BgNCol($footer-background, black);
+
+    @include GridCenter;
+
+    & > div.footer_container {
+        @include Debug(white);
+        // @include Square(100%);
+        // @Include Flex();
+
+        // & > 
+    }
 }
