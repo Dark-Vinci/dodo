@@ -1,3 +1,6 @@
+@import '../../sass/mixins/others.scss';
+
 div.container {
     border: 2px solid black;
+    @include Rectangle(100vw, 777px);
 }
