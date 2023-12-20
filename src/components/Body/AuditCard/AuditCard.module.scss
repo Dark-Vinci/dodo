@@ -1,0 +1,53 @@
+@import '../../../sass/mixins/others.scss';
+@import '../../../sass/mixins/border.scss';
+@import '../../../sass/constant/colors.scss';
+@import '../../../sass/mixins/alignment.scss';
+
+div.container {
+    width: calc(50vw - 50px);
+    height: 240px;
+    @include Flex(column, space-evenly);
+    background-color: $audit-card-bg-color;
+    border-radius: 20px;
+    padding: 0 30px 0 30px;
+
+    & > div {
+        width: 100%;
+    }
+    
+    & > div.header {
+        // @include Debug(blue);
+        height: 36px;
+
+        & > p {
+            color: $white-text-color;
+            font-size: 30px;
+        }
+    }
+
+    & > div.description {
+        // @include Debug(aqua);
+        // height: 44px;
+
+        & > p {
+            color: $audit-card-description-text-color;
+            font-size: 16px;
+        }
+    }
+
+    & > div.icons {
+        // @include Debug(lime);
+        @include Flex(row, space-around);
+        height: 60px;
+
+        & > div {
+            // border: 2px solid yellow;
+            background-color: $audit-card-icon-bg-color;
+            border-radius: 10px;
+            @include GridCenter;
+            height: 60px;
+            width: 60px;
+        }
+    }
+
+}
