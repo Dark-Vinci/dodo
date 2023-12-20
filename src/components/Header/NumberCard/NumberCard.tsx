@@ -10,10 +10,10 @@ interface NumberCardProps {
 export function NumberCard({value, description}: NumberCardProps): JSX.Element {
     return (
         <div className={ style.container }>
-            <div className="number_container">
-                <div className="numb">$ {value}</div>
-                <div className="description">{description}</div>
-            </div>
+            {/* <div className={ style.number_container }> */}
+                <div className={ style.numb }>$ {value}</div>
+                <div className={ style.description }>{description}</div>
+            {/* </div> */}
         </div>
     );
 }

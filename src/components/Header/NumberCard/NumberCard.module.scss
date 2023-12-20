@@ -9,13 +9,26 @@ div.container {
     width: 324px;
     height: 111px;
     background-color: $body-background;
-    border-radius: 30px;
-
-    @include GridCenter();
+    border-radius: 20px;
     color: $white-text-color;
+    @include Flex(column);
 
-    div.number_container {
-        margin: 20px;
-        @include Flex(colun);
+    &:hover {
+        opacity: 0.9;
+    }
+
+    & > div.numb {
+        font-size: 35px;
+    }
+
+    & > div {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    & > div.description {
+        font-size: 20px;
+        padding-top: 0;
     }
 }

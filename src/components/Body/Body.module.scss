@@ -78,6 +78,9 @@ div.container {
                         border-radius: 15px;
                         // border: 2px solid yellow;
                         @include GridCenter();
+                        &:hover {
+                            opacity: 0.9;
+                        }
                     }
                 }
             }
