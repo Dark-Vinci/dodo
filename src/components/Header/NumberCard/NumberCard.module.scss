@@ -1,0 +1,21 @@
+@import '../../../sass/mixins/others.scss';
+@import '../../../sass/mixins/border.scss';
+@import '../../../sass/constant/colors.scss';
+@import '../../../sass/mixins/alignment.scss';
+
+
+div.container {
+    border-top: 1px solid green;
+    width: 324px;
+    height: 111px;
+    background-color: $body-background;
+    border-radius: 30px;
+
+    @include GridCenter();
+    color: $white-text-color;
+
+    div.number_container {
+        margin: 20px;
+        @include Flex(colun);
+    }
+}
