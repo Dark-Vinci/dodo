@@ -1,5 +1,9 @@
 @import '../../sass/mixins/others.scss';
 @import '../../sass/mixins/border.scss';
+@import '../../sass/mixins/others.scss';
+@import '../../sass/mixins/border.scss';
+@import '../../sass/constant/colors.scss';
+@import '../../sass/mixins/alignment.scss';
 
 div.container {
     @include Debug(purple);
