@@ -4,7 +4,6 @@ import style from './Header.module.scss';
 import { SiBinance, SiChromatic  } from 'react-icons/si';
 import { FaPiggyBank, FaBitcoin } from "react-icons/fa";
 import { TbBrandCoinbase } from "react-icons/tb";
-import { LuOrbit } from "react-icons/lu";
 import { CiMenuKebab } from "react-icons/ci";
 
 export function Header(): JSX.Element {
@@ -78,7 +77,6 @@ export function Header(): JSX.Element {
                 </div>
 
                 <div className={ style.right }>right hand side</div>
-                {/* <div className="left"></div> */}
             </div>
         </div>
     );
