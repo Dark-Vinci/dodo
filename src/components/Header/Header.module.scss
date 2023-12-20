@@ -1,6 +1,10 @@
 @import '../../sass/mixins/others.scss';
+@import '../../sass/mixins/border.scss';
 
 div.container {
-    border: 2px solid black;
+    @include Debug();
+    box-sizing: border-box;
     @include Rectangle(100vw, 777px);
+    @include BgNCol(white, black);
+    max-width: 100vw;
 }

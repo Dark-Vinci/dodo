@@ -1,6 +1,7 @@
 @import '../../sass/mixins/others.scss';
+@import '../../sass/mixins/border.scss';
 
 div.container {
-    border-top: 1px solid purple;
+    // @include Debug(purple);
     @include Rectangle(100vw, 75px);
 }

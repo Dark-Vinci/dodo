@@ -12,3 +12,8 @@
     width: $w;
     height: $h;
 }
+
+@mixin BgNCol($bg: white, $color: black) {
+    color: $color;
+    background-color: $bg;
+}
