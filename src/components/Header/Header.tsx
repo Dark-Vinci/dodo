@@ -6,6 +6,7 @@ import { FaPiggyBank, FaBitcoin } from "react-icons/fa";
 import { TbBrandCoinbase } from "react-icons/tb";
 import { CiMenuKebab } from "react-icons/ci";
 import { BigCard } from './BigCard';
+import { NumberCard } from './NumberCard';
 
 export function Header(): JSX.Element {
     return (
@@ -79,7 +80,7 @@ export function Header(): JSX.Element {
                 </div>
 
                 <div className={ style.right }>
-                    <div className="f">
+                    <div className={ style.f }>
                         <BigCard 
                             title={'FOR TRADERS'} 
                             description={'DODO X: The Best Price and Cross-Chain Aggregator'} 
@@ -88,7 +89,7 @@ export function Header(): JSX.Element {
                         />
                     </div>
 
-                    <div className="s">
+                    <div className={ style.s }>
                         <BigCard 
                             title={'FOR DEVELOPERS'} 
                             description={'Add trading function to your products and earn transaction fees'} 
@@ -97,8 +98,19 @@ export function Header(): JSX.Element {
                         />
                     </div>
 
-                    <div className="l">
-
+                    <div className={ style.l }>
+                        <div className={ style.w }>
+                            <NumberCard 
+                                value={'132.52B'} 
+                                description={'All-Time Volume'} 
+                            />
+                        </div>
+                        <div className={ style.t }>
+                            <NumberCard 
+                                value={'2,736,050'} 
+                                description={'Total Users'} 
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
