@@ -4,17 +4,138 @@
 @import '../../sass/mixins/alignment.scss';
 
 div.container {
-    @include Debug(green);
-    @include Rectangle(100vw, 577px);
+    // @include Debug(green);
+    // @include Rectangle(100vw, 577px);
     @include BgNCol($footer-background, black);
 
     @include GridCenter;
 
     & > div.footer_container {
-        @include Debug(white);
-        // @include Square(100%);
-        // @Include Flex();
+        // @include Debug(white);
+        @include Square(100%);
+        // @include Rectangle(100vw, 577px);
+        // width: 100%;
+        @include Flex(column);
 
-        // & > 
+        & > div {
+            width: auto;
+        }
+
+        & > div.top_container {
+            // @include Debug(blue);
+            // flex-basis: 210px;
+            width: auto;
+            overflow-x: scroll;
+            // position: relative;
+            // @include Flex(column, flex-start);
+
+            & > div.top {
+                // width: 500vw;
+                width: 100vw;
+                // width: 4000px;
+                // @include Debug(aqua);
+                // @include Debug(white);
+                @include Flex(row, flex-end);
+                overflow-x: auto;
+                white-space: nowrap;
+                height: 210px;
+                overflow-y: hidden;
+                // position: absolute;
+                // left: 0;
+                // top: 0;
+                // right: 0;
+                // bottom: 0;
+                // // o
+
+                & > span {
+                    color: $footer-moving-text-color;
+                    // margin-left: 15px;
+                    height: 220px;
+                    // @include Debug();/
+                    font-size: 220px;
+                    width: 100vw;
+                    overflow-y: hidden;
+                }
+            }
+        }
+
+        & > div.body_container {
+            // @include Debug();
+            flex-basis: 367px;
+            @include GridCenter;
+
+            & > div.body {
+                // @include Debug(aqua);
+                // @include Square(inherit);
+                @include Flex();
+                // @include Rectangle(100vw, 367px);
+                // height: 367px;
+                // width: 100vw;
+
+                & > div {
+                    @include Rectangle(50vw, 367px);
+                    // @include Debug(tomato);
+                    margin-bottom: 50px;
+                }
+
+                & > div.left_container {
+                    // @include Debug(white);
+                    @include Flex(column, space-between, flex-start);
+                    padding-left: 50px;
+
+                    & > div {
+                        width: 250px;
+                        // @include Debug();
+                    }
+
+                    & > div.socials {
+                        div.socials_container {
+                            @include Flex(row, space-around);
+                        }
+                    }
+                }
+
+                & > div.right_container {
+                    // @include Debug(green);
+                    @include Flex(row, center, center);
+                    width: 598px;
+                    // height: 100%;
+
+                    & > div {
+                        height: 100%;
+                        flex-basis: calc(100%/3);
+                        & > div {
+                            height: 100%;
+                            // @include Debug(blue);
+                            @include Flex(column, space-between);
+
+                            & > ul {
+                                // border: 2px solid red;
+                                @include Rectangle(100%);
+                                height: 300px;
+                                list-style-type: none;
+                                @include Flex(column, flex-start, flex-start);
+
+                                & > li {
+                                    margin-bottom: 10px;
+                                    & > a {
+                                        color: $footer-list-color;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+
+                            & > p {
+                                @include Rectangle(100%);
+                                height: 70px;
+                                text-align: start;
+                                vertical-align: center;
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
