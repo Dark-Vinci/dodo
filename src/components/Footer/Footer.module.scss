@@ -60,6 +60,7 @@ div.container {
         }
 
         & > div.body_container {
+            margin-top: 90px;
             // @include Debug();
             flex-basis: 367px;
             @include GridCenter;

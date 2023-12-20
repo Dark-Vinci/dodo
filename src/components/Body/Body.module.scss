@@ -22,17 +22,11 @@ div.container {
             width: 100%;
             padding: 30px;
             @include Flex();
-            // border: ;
 
             & > div.right {
                 // @include Debug();
                 flex-basis: 25%;
                 @include Square(100%);
-
-                // & > div.right {
-                //     flex-basis: 30%;
-                //     @include Debug(blue);
-                //     @include Square(100%);
     
                     & > div.right_container {
                         @include Square(100%);
@@ -46,6 +40,10 @@ div.container {
                             // border: 2px solid yellow;
                             border-radius: 15px;
                             @include GridCenter();
+
+                            &:hover {
+                                opacity: 0.9;
+                            }
                         }
                     }
                 // }
