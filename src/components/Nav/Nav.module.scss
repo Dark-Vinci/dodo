@@ -2,6 +2,6 @@
 @import '../../sass/mixins/border.scss';
 
 div.container {
-    // @include Debug(purple);
+    @include Debug(purple);
     @include Rectangle(100vw, 75px);
 }
