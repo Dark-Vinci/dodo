@@ -6,6 +6,91 @@
 @import '../../sass/mixins/alignment.scss';
 
 div.container {
-    @include Debug(purple);
+    // @include Debug(purple);
     @include Rectangle(100vw, 75px);
+
+    @include GridCenter;
+
+    & > div.nav_container {
+        // @include Debug(green);
+        @include Flex();
+        width: 100vw;
+
+        & > div.right {
+            // @include Debug(aqua);
+            flex-basis: 50%;
+            @include Flex(row, flex-end);
+            margin-right: 20px;
+
+            & > div {
+                margin: 5px;
+            }
+
+            & > div.input {
+                width: 375px;
+                height: 36px;
+                border-radius: 8px;
+                // @include Debug(blue);
+                @include Flex();
+
+                background-color: $header-input-background-color;
+
+                & > span {
+                    margin-left: 10px;
+                    @include Square(20px);
+                }
+
+                & > input {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    @include Square(100%);
+                    background-color: inherit;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            & > div.logo {
+                // @include Debug();
+                @include Square(36px);
+                border: 3px solid $icon-border-color;
+                border-radius: 15px;
+                @include GridCenter();
+            }
+        }
+
+        & > div.left {
+            flex-basis: 50%;
+            width: 100%;
+            // @include Debug();
+            @include GridCenter();
+            @include Flex(row, space-around);
+
+            // @include Debug(blue);
+            width: 100%;
+
+            & > div.tabs {
+                flex-basis: 70%;
+                width: 100%;
+                // @include Debug(yellow);
+                ul {
+                    @include Flex(row, space-around);
+                    list-style: none;
+                    & > li {
+                        color: #8C8C8D;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            & > div.logo {
+                // @include Debug();
+                flex-basis: 30%;
+            }
+        }
+    }
 }
